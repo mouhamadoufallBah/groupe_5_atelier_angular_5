@@ -68,7 +68,7 @@
           <td>{{ c.prenom }}</td>
           <td>{{ c.telephone }}</td>
           <td>{{ c.email }}</td>
-          <td>{{ c.createdAT | date: "EEEE, d, MMMM, y"}}</td>
+          <td>{{ c.createdAT }}</td>
           <td>
             <a class="btn btn-sm colorbtn me-3" [routerLink]="['/contact-detail', c.id]">Voir detail</a>
             <a class="btn btn-sm colorbtn me-3" [routerLink]="['/contact-update', c.id]">Modifier</a>
