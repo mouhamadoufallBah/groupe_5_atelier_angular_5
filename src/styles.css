@@ -1,0 +1,43 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~datatables.net-dt/css/jquery.dataTables.css";
+
+.ajoutbtn{
+    background-color: #FF6F61;
+    color:white;
+}  
+.colorbtn {
+    border: 1px solid #FF6F61 ;
+    color: #FF6F61;
+  
+    /* background-color: #FF6F61; */
+  }
+  .colorbtn:hover{
+    color: white;
+    background-color: #FF6F61;
+  }
+
+
+  .logo {
+    width: 100px;  
+    /* margin-right: 10%;  */
+  }
+.navbar{
+    background-color:#FF6F61;
+}
+.navbar-brand{
+    color:white;
+    font-weight: bold;
+}
+
+
+.hover-effect:hover {
+    background-color: rgba(0, 0, 0, 0.512);
+  }
+.searchbtn{
+  border: 1px solid white;
+  color: white;
+}
+.searchbtn:hover{
+  background-color: white;
+  color: #FF6F61;
+}

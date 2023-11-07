@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header ">
+      Détails du contact
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img [src]="contactInfo.photo" alt="Photo du contact" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <h2>{{ contactInfo.prenom }} {{ contactInfo.nom }}</h2>
+          <p><strong>E-mail :</strong> {{ contactInfo.email }}</p>
+          <p><strong>Téléphone :</strong> {{ contactInfo.telephone }}</p>
+          <p><strong>Date de création :</strong> {{ contactInfo.createdAT }}</p>
+          <p><strong>Créé par :</strong> {{ currentUserObj.nomComplet }}</p>
+          <p><strong>Description :</strong> {{ contactInfo.description }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-outline-danger mt-3" routerLink="/contact-list">Retour</button>
+</div>
+
+<app-footer></app-footer>

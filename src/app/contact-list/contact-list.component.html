@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/contact-list">
+      <img src="assets/logo_white.png" alt="Votre Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active text-white hover-effect" routerLink="/contact-list"><i
+              class="bi bi-house-door-fill"></i>Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" routerLink="/contact-add"><i
+              class="bi bi-plus-circle-fill"></i>Ajouter contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" routerLink="/contact-trash"><i
+              class="bi bi-trash-fill"></i>Corbeille</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+          [(ngModel)]="filterValue" name="filterValue">
+        <button class="btn btn-outline-light" type="submit" (click)="filterByTitle()">Search</button>
+      </form>
+      <div class="deconnect">
+        <button class="btn disconnect" (click)="logout()">Deconnexion</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="listc p-3 fw-bold">
+  <h2>Liste des contacts</h2>
+
+</div>
+<div class="container mt-2">
+  <a class="btn btn-sm ajoutbtn " [routerLink]="['/contact-add']">Ajouter un nouveau contact</a>
+  <div class="table-responsive">
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Telephone</th>
+          <th>email</th>
+          <th>Ajouté le</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="contacts.length < 1">
+        <tr>
+          <td colspan="7" class="text-center">Aucun contact ajouter</td>
+        </tr>
+      </tbody>
+
+      <tbody *ngIf="contacts.length ">
+        <tr *ngFor="let c of filteredElement">
+          <td>
+            <img [src]="c.photo" alt="Avatar" class="avatar-img " style="height: 50px;">
+          </td>
+          <td>{{ c.nom }}</td>
+          <td>{{ c.prenom }}</td>
+          <td>{{ c.telephone }}</td>
+          <td>{{ c.email }}</td>
+          <td>{{ c.createdAT | date: "EEEE, d, MMMM, y"}}</td>
+          <td>
+            <a class="btn btn-sm colorbtn me-3" [routerLink]="['/contact-detail', c.id]">Voir detail</a>
+            <a class="btn btn-sm colorbtn me-3" [routerLink]="['/contact-update', c.id]">Modifier</a>
+            <button class="btn btn-sm colorbtn" (click)="archiver(c.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+<app-footer></app-footer>

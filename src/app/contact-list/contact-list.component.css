@@ -1,0 +1,53 @@
+.ajoutbtn{
+    background-color: #FF6F61;
+    color:white;
+}
+.collapse{
+    display: flex;
+    justify-content:space-between;
+  }
+  .logo {
+    width: 100px;  
+    /* margin-right: 10%;  */
+  }
+.navbar{
+    background-color:#FF6F61;
+}
+.navbar-brand{
+    color:white;
+    font-weight: bold;
+}
+
+
+.hover-effect:hover {
+    background-color: rgba(0, 0, 0, 0.512);
+  }
+.searchbtn{
+  border: 1px solid white;
+  color: white;
+}
+.searchbtn:hover{
+  background-color: white;
+  color: #FF6F61;
+}
+.deconnect{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 10px;
+  
+}
+.deconnect a {
+  text-decoration: none;
+  color: white;
+}
+.disconnect{
+  background-color: white;
+  color: #FF6F61;
+
+}
+.listc{
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-weight: bold;
+}

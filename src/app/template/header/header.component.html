@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/contact-list">
+      <img src="assets/logo_white.png" alt="Votre Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active text-white hover-effect"  routerLink="/contact-list"><i class="bi bi-house-door-fill"></i>Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" routerLink="/contact-add"><i class="bi bi-plus-circle-fill"></i>Ajouter contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white hover-effect" routerLink="/contact-trash"><i class="bi bi-trash-fill"></i>Corbeille</a>
+        </li>
+      </ul>
+      <div class="deconnect">
+        <button class="btn disconnect" (click)="logout()" >Deconnexion</button> 
+      </div> 
+    </div>
+  </div>
+</nav>
+

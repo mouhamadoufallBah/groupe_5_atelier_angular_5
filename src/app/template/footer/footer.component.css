@@ -1,0 +1,16 @@
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:#ff6f61; 
+    font-size: 25px;
+    color: white;
+  }
+  
+body {
+    margin-bottom: 60px; 
+  }
+  /* .logo {
+    width: 10%; 
+    margin-right: 10%; 
+  } */

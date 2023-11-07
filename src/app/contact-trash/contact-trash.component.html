@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="trashn p-3 fw-bold">
+  <h2>Liste des contacts supprimer</h2>
+</div>
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Telephone</th>
+        <th>email</th>
+        <th>Ajouté le</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="contacts.length < 1">
+      <tr>
+        <td colspan="7" class="text-center">Aucun contact supprimer</td>
+      </tr>
+    </tbody>
+
+    <tbody *ngIf="contacts.length ">
+      <tr *ngFor="let c of contacts">
+        <td>{{ c.nom }}</td>
+        <td>{{ c.prenom }}</td>
+        <td>{{ c.telephone }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.createdAT }}</td>
+        <td>
+          <button class="btn btn-sm colorbtn" (click)="archiver(c.id)">Restaurer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<app-footer></app-footer>
