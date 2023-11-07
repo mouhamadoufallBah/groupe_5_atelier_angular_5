@@ -70,7 +70,7 @@ export class ContactListComponent implements OnInit {
         localStorage.setItem('users', JSON.stringify(this.db))
 
         //recuperer les contact de l'utlisateur connecter dont leur etat est egal a false
-        this.contacts = (this.currrentuser.contact).filter((contact: any) => contact.etat === false);
+        this.filteredElement = (this.currrentuser.contact).filter((contact: any) => contact.etat === false);
 
       }
     })
